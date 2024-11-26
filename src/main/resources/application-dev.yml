@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: KotlinApp
+
+  datasource:
+    url: jdbc:postgresql://localhost:5431/taskmaster_db #todo
+    username: postgres
+    password: postgres
+
+#  liquibase:
+#    change-log: classpath:/db/changelog/db.changelog-master.yaml
+#    enabled: true
+#    url: jdbc:postgresql://localhost:5431/taskmaster_db
+#    default-schema: public
+#    liquibase-schema: public
+#    user: postgres
+#    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false

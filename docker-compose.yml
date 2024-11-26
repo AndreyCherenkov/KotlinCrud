@@ -1,0 +1,20 @@
+version: "3.9"
+
+networks:
+  book-server-network:
+    driver: bridge
+
+services:
+
+  postgres:
+    image: postgres:16.4
+    networks:
+      - book-server-network
+    container_name: book_server_db
+    ports:
+      - "5431:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: taskmaster_db #todo
+    command: postgres -c log_statement=all
