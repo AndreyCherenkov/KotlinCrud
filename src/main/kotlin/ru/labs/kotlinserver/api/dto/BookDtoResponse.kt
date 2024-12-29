@@ -1,4 +1,4 @@
-package api.dto
+package ru.labs.kotlinserver.api.dto
 
 import java.util.*
 
